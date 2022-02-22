@@ -1,0 +1,13 @@
+[Unit]
+Description=Switch off Raspberry LEDs
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root
+ExecStart=/bin/sh -c 'for led in 0 1; do echo 0 > /sys/class/leds/led$led/brightness; done'
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
