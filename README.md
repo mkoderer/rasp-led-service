@@ -4,7 +4,7 @@ systemd service to switch off Raspberry LEDs on boot time
 
 # How to install
 
-1.) Copy service file to systemd unit files::
+1.) Copy service file to systemd unit files:
 ```
 sudo cp rasp-led-service.service /etc/systemd/system/
 chmod 664 /etc/systemd/system/rasp-led-service.service
